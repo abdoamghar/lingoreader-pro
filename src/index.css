@@ -364,6 +364,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .panel-header {
@@ -1203,6 +1205,9 @@ body {
   .translator-panel.hidden {
     transform: translateY(100%);
     position: fixed;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: none;
   }
 
   .pdf-container {
