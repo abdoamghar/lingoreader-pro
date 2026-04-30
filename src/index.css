@@ -1132,3 +1132,143 @@ body {
 }
 
 
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 1024px) {
+  .translator-panel {
+    width: 380px;
+  }
+  
+  .profile-hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .view-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.25rem;
+  }
+
+  .nav-tab {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .export-btn, .upload-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .translator-panel {
+    width: 100%;
+    height: 40vh;
+    border-left: none;
+    border-top: var(--glass-border);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .translator-panel.hidden {
+    transform: translateY(100%);
+    position: fixed;
+  }
+
+  .pdf-container {
+    padding: 1rem;
+  }
+
+  .pdf-toolbar {
+    bottom: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: max-content;
+    padding: 0.4rem;
+  }
+
+  .profile-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-card {
+    padding: 2rem;
+  }
+
+  .profile-avatar {
+    font-size: 4rem;
+  }
+
+  .view-heading {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vault-view, .analytics-view {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-logo {
+    font-size: 1.2rem;
+  }
+
+  .selected-word {
+    font-size: 2.2rem;
+  }
+
+  .arabic-translation {
+    font-size: 1.8rem;
+  }
+
+  .pdf-toolbar {
+    gap: 0.4rem;
+    scale: 0.9;
+  }
+  
+  .page-input {
+    width: 45px;
+  }
+}

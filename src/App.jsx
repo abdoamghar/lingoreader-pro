@@ -64,6 +64,14 @@ function App() {
   const [panelOpen, setPanelOpen] = useState(false);
   const [selectionData, setSelectionData] = useState(null);
   const [highlights, setHighlights] = useState([]);
+  const [pdfWidth, setPdfWidth] = useState(Math.min(window.innerWidth - 40, 800));
+  
+  // Handle Resize for PDF width
+  useEffect(() => {
+    const handleResize = () => setPdfWidth(Math.min(window.innerWidth - 40, 800));
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // New Features State
   const [currentView, setCurrentView] = useState('reader'); // 'reader', 'vault', 'analytics'
@@ -715,7 +723,7 @@ function App() {
                           renderTextLayer={true}
                           renderAnnotationLayer={false}
                           onRenderTextLayerSuccess={highlightNotes}
-                          width={800}
+                          width={pdfWidth}
                         />
                         {/* Manual Highlights Overlay */}
                         <div className="highlights-layer">
